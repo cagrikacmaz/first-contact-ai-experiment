@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIRST CONTACT // ANAPHORA</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- 3D WebGL Canvas Viewport -->
+    <div id="canvas-container"></div>
+
+    <!-- Initial Awakening / Audio Unlock Screen -->
+    <div id="awakening-overlay">
+      <h1 class="awakening-title">FIRST CONTACT</h1>
+      <div class="awakening-subtitle">THE CHIME CALDERA // ENCOUNTER WITH ANAPHORA</div>
+      <button class="awakening-btn" id="start-btn">Enter the Caldera</button>
+      <div class="awakening-hint">Headphones recommended for spatial audio & sub-bass harmonics</div>
+    </div>
+
+    <!-- Ambient First-Person HUD -->
+    <div id="hud-overlay">
+      <!-- Top Bar -->
+      <div class="hud-top-bar">
+        <div class="phase-indicator">
+          <span class="phase-beacon" id="phase-beacon"></span>
+          <span id="phase-text">PHASE: DORMANT OBSERVER</span>
+        </div>
+
+        <div class="hud-top-actions">
+          <button class="hud-action-btn" id="btn-toggle-lens" title="Exo-Acoustic Spectrograph (Tab)">
+            SPECTROGRAPH [TAB]
+          </button>
+          <button class="hud-action-btn" id="btn-toggle-creators" title="Why I Built This World">
+            CREATOR'S NOTE [?]
+          </button>
+          <button class="hud-action-btn" id="btn-toggle-audio" title="Mute/Unmute Audio">
+            AUDIO: ON
+          </button>
+        </div>
+      </div>
+
+      <!-- Reticle -->
+      <div class="reticle" id="reticle"></div>
+
+      <!-- Bottom Resonator Wand Controls -->
+      <div class="hud-bottom-bar">
+        <div class="action-bar">
+          <div class="action-slot" id="slot-drone" title="Emit 55 Hz Ground Resonance (Key: 1)">
+            <span class="action-key">[1]</span>
+            <span class="action-label">SUB-DRONE</span>
+            <span class="action-freq">55 Hz</span>
+          </div>
+
+          <div class="action-slot" id="slot-fifth" title="Emit 165 Hz Consonant Fifth (Key: 2)">
+            <span class="action-key">[2]</span>
+            <span class="action-label">HARMONIC 5TH</span>
+            <span class="action-freq">165 Hz</span>
+          </div>
+
+          <div class="action-slot" id="slot-overtone" title="Emit 440 Hz Crystalline Overtone (Key: 3)">
+            <span class="action-key">[3]</span>
+            <span class="action-label">OVERTONE</span>
+            <span class="action-freq">440 Hz</span>
+          </div>
+
+          <div class="action-slot" id="slot-wave" title="Project Coherent Optical Wavefront (Key: Q / E)">
+            <span class="action-key">[Q]</span>
+            <span class="action-label">LIGHT WAVE</span>
+            <span class="action-freq">COHERENT</span>
+          </div>
+
+          <div class="action-slot" id="slot-anchor" title="Plant Standing-Wave Quartz Anchor (Key: R / F)">
+            <span class="action-key">[R]</span>
+            <span class="action-label">ANCHOR</span>
+            <span class="action-freq">OFFERING</span>
+          </div>
+        </div>
+
+        <div class="hud-instructions-row">
+          <span>[WASD] Traverse Silt</span>
+          <span>[MOUSE] Look</span>
+          <span>[SHIFT] Sprint</span>
+          <span>[STILLNESS] Receptive Listening</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Module Script -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

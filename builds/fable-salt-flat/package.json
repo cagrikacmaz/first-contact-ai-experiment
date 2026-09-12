@@ -1,0 +1,13 @@
+{
+  "name": "first-contact",
+  "version": "1.0.0",
+  "description": "A browser-based encounter with an unknown intelligence on a flooded salt flat.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

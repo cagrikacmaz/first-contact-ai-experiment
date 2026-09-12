@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>First Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <!-- Arrival -->
+  <div id="intro" class="layer">
+    <div class="intro-inner">
+      <div class="title">FIRST CONTACT</div>
+      <p class="lede" id="lede">
+        Salt flat. Forty-one kilometres from the road.<br />
+        The survey team drove out at dusk.<br />
+        I stayed for the last depth readings.
+      </p>
+      <button id="enter" class="ghost">Enter</button>
+      <div class="fine">headphones recommended · desktop, mouse and keyboard</div>
+    </div>
+  </div>
+
+  <!-- In-world HUD (compact, secondary) -->
+  <div id="hud" class="hidden">
+    <div id="hint"></div>
+    <div id="relock" class="hidden">click to look around</div>
+    <div id="corner">
+      <button id="btn-notes" title="Field notes (Tab)">notes</button>
+      <button id="btn-menu" title="Menu (Esc)">menu</button>
+    </div>
+    <div id="lantern-state"></div>
+    <div id="vignette"></div>
+  </div>
+
+  <!-- Field notes: the interpretation layer -->
+  <div id="notes" class="layer panel hidden">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span>Field notes</span>
+        <span class="clock" id="notes-clock"></span>
+        <button class="close" data-close="notes">close</button>
+      </div>
+      <div class="notes-cols">
+        <div class="notes-main">
+          <div id="notes-list"></div>
+        </div>
+        <aside class="notes-side">
+          <h4>What it seems to have kept</h4>
+          <div id="kept"></div>
+          <h4>How it seems to be</h4>
+          <div id="reading"></div>
+          <h4>What it may have made of me</h4>
+          <div id="verdict"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div id="menu" class="layer panel hidden">
+    <div class="panel-inner narrow">
+      <div class="panel-head"><span>First Contact</span><button class="close" data-close="menu">resume</button></div>
+      <div class="menu-list">
+        <button data-open="notes">Field notes</button>
+        <button data-open="creator">Why I built this world</button>
+        <button id="btn-sound">Sound: on</button>
+        <button id="btn-restart">Start another night</button>
+      </div>
+      <div class="controls">
+        <div><b>mouse</b> look · <b>W A S D</b> walk · <b>shift</b> run</div>
+        <div><b>space</b> tap the water · <b>F</b> pulse the lantern · hold <b>F</b> to raise it</div>
+        <div><b>Q</b> darken / relight the lantern · <b>G</b> set the lantern down, pick it up</div>
+        <div><b>tab</b> field notes · <b>esc</b> this menu</div>
+      </div>
+      <div class="fine" id="ai-status"></div>
+    </div>
+  </div>
+
+  <!-- Creator's note -->
+  <div id="creator" class="layer panel hidden">
+    <div class="panel-inner narrow">
+      <div class="panel-head"><span>Why I built this world</span><button class="close" data-close="creator">close</button></div>
+      <div id="creator-text" class="prose"></div>
+    </div>
+  </div>
+
+  <!-- Dawn -->
+  <div id="dawn" class="layer hidden">
+    <div class="intro-inner">
+      <div class="title small">DAWN</div>
+      <div id="dawn-text" class="prose"></div>
+      <div class="row">
+        <button id="btn-another" class="ghost">Another night</button>
+        <button id="btn-forget" class="ghost dim">Forget it all</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

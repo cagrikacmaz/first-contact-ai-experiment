@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080e11">
+  <meta name="description" content="Enter the Stillwater. An interactive first encounter with an intelligence that remembers the space between your gestures.">
+  <title>First Contact — The Stillwater</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080e11'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='5' fill='none' stroke='%23e4b786' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23ecdbbf'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="experience">
+    <canvas id="world" tabindex="0" aria-label="The Stillwater encounter. Move with W A S D or arrow keys. Space sends the selected signal. Keys 1, 2, 3 select light, tone, or trace."></canvas>
+    <canvas id="gestures" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <header>
+      <a class="wordmark" href="/" aria-label="First Contact home"><span class="brand-icon" aria-hidden="true">◉</span> FIRST CONTACT</a>
+      <div class="chapter"><span class="tiny-line"></span> THE STILLWATER <span class="chapter-no">/ 01</span></div>
+      <div class="top-actions">
+        <button id="sound" class="icon-button" aria-label="Enable sound" title="Sound"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg></button>
+        <button id="menu" class="icon-button" aria-label="Open encounter menu" title="Encounter menu"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
+      </div>
+    </header>
+    <div id="arrival" class="arrival">
+      <div class="eyebrow">AN ENCOUNTER IN THE UNKNOWN</div>
+      <h1>Something<br>is listening.</h1>
+      <p>You are standing in water.<br>Above you, it has stopped falling.</p>
+      <button id="enter" class="enter-button">Step into the stillwater <span aria-hidden="true">↗</span></button>
+      <span class="audio-note">Sound recommended. Curiosity required.</span>
+    </div>
+    <div id="presence" class="presence" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div id="subtitle" class="subtitle" role="status" aria-live="polite"></div>
+    <div id="encounter-ui" hidden>
+      <div class="location"><span class="eyebrow" id="phase">THE THRESHOLD</span><span id="location-note">Water at your ankles. No footprints behind you.</span></div>
+      <div class="reticle" aria-hidden="true"></div>
+      <div class="signal-hint" id="signal-hint">Click the water to offer a light.</div>
+      <nav class="instruments" aria-label="Ways to make contact">
+        <button class="instrument selected" data-mode="light" aria-pressed="true"><span class="key">1</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"/></svg><span>Light</span></button>
+        <button class="instrument" data-mode="tone" aria-pressed="false"><span class="key">2</span><svg viewBox="0 0 24 24"><path d="M3 9v6m4-10v14m5-17v20m5-17v14m4-10v6"/></svg><span>Tone</span></button>
+        <button class="instrument" data-mode="trace" aria-pressed="false"><span class="key">3</span><svg viewBox="0 0 24 24"><path d="M3 17C3 2 21 2 21 12S8 23 8 14s11-7 11-7"/></svg><span>Trace</span></button>
+        <span class="instrument-divider"></span>
+        <button id="listen" class="instrument listen" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 8a8 8 0 0 1 12 0M9 11a4 4 0 0 1 6 0M12 15v4"/></svg><span>Listen</span><span class="key">L</span></button>
+      </nav>
+      <div class="movement"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move slowly</span><span class="move-separator">/</span><span><kbd>SPACE</kbd> signal</span></div>
+      <button id="field-notes" class="field-notes"><span class="notes-symbol">⌁</span> Field notes <span id="note-count">00</span></button>
+      <div class="touch-move" aria-label="Movement controls"><button data-move="forward" aria-label="Step closer">↑</button><button data-move="back" aria-label="Step back">↓</button></div>
+    </div>
+    <footer id="arrival-footer"><span>ONE HUMAN. SOMETHING ELSE.</span><span>A living encounter <span class="footer-star">✳</span></span></footer>
+    <div id="error" hidden role="alert"></div>
+    <dialog id="panel"><div class="panel-top"><span class="eyebrow" id="panel-label">ENCOUNTER</span><button id="close-panel" class="icon-button" aria-label="Close panel">✕</button></div><div id="panel-content"></div></dialog>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

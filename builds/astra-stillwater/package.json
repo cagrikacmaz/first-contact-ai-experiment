@@ -1,0 +1,6 @@
+{
+  "name": "first-contact-the-stillwater", "version": "1.0.0", "private": true,
+  "type": "module", "description": "An embodied encounter with an intelligence made of intervals.",
+  "scripts": { "start": "node server.mjs", "test": "node --test tests/*.test.mjs", "check": "node --check dist/app.js && node --check dist/world.js && node --check dist/encounter.js" },
+  "engines": { "node": ">=20" }
+}

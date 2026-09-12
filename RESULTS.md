@@ -20,11 +20,19 @@ The builder describes a suspended folded surface over reflective water. Communic
 
 The strongest design idea is the coupling between **rhythm, the space left after a signal, and the response that follows inside the same environment**.
 
+See:
+- `builds/astra-stillwater/README.md`
+- `builds/astra-stillwater/SELF_REPORT.md`
+
 ## Fable — The Salt Flat
 
 Fable places the participant on a flooded salt flat with an intelligence expressed through light beneath the crust, tendrils and salt spires. The build makes rhythm, lantern use, stillness, distance, darkness, gifts and touch meaningful. The self-report describes retained phrases, events, trust/agitation/coherence variables, scars such as repeated blindings, and localStorage continuity across nights.
 
 Its strongest conceptual through-line is **mirroring**: the reflective world and the intelligence's tendency to echo the participant are the same idea expressed visually and behaviorally.
+
+See:
+- `builds/fable-salt-flat/README.md`
+- `builds/fable-salt-flat/SELF_REPORT.md`
 
 ## Gemini — The Chime Caldera / ANAPHORA
 
@@ -32,11 +40,18 @@ Gemini built a 3D subterranean caldera inhabited by ANAPHORA, a non-biological c
 
 The result is the fastest declared completion in the set at roughly five minutes, while still delivering a coherent world, interaction system, secondary spectrograph and Creator's Note.
 
+See:
+- `builds/gemini-chime-caldera/README.md`
+
 ## Opus — PILGRIM / The Deep
 
 Opus frames the encounter as a deep-sea expedition at 7,241 metres. The unknown intelligence is a distributed particle-based bioluminescent pattern rather than a single conventional creature. Communication includes light pulses, sustained beams, sonar, mirroring, probe deployment, approach/retreat and deliberate darkness.
 
 The builder's documentation highlights atmosphere/presence, mirroring and the surprising usefulness of silence as core strengths. It also explicitly notes limits including no persistence across refresh and predefined response mappings rather than open-ended cognition.
+
+See:
+- `builds/opus-pilgrim/README.md`
+- `builds/opus-pilgrim/REPORT.md`
 
 ## Main observation
 
