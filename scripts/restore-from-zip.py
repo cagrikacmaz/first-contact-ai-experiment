@@ -4,7 +4,6 @@ Uses only Python's standard library and Git. Run with an optional ZIP path.
 The original build files are imported byte-for-byte; main is never force-pushed.
 """
 import hashlib
-import os
 from pathlib import Path, PurePosixPath
 import shutil
 import subprocess
@@ -111,6 +110,9 @@ def main():
     repo_dir = task_dir / "repository"
     print("Working copy:", repo_dir)
     git("clone", "--branch", "main", REPO, str(repo_dir), capture=False)
+    # Preserve the archive bytes even on Windows with global autocrlf enabled.
+    git("config", "core.autocrlf", "false", cwd=repo_dir)
+    git("config", "core.safecrlf", "false", cwd=repo_dir)
     head = git("rev-parse", "HEAD", cwd=repo_dir)
 
     # Refuse to overwrite unrelated work made since the diagnosed broken import.
